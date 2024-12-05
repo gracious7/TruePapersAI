@@ -1,81 +1,66 @@
-# Turborepo starter
+# TruePapersAI
 
-This is an official starter Turborepo.
+TruePapersAI is a web and API-based application designed to provide AI-powered insights and services related to papers and research content. This repository contains both the web frontend and the backend API, managed using Turborepo for efficient development and deployment.
 
-## Using this example
+## Features
+- Web application for interacting with the AI services.
+- API backend to process requests and provide data.
+- Built with modern technologies like TypeScript, Next.js, and TailwindCSS.
 
-Run the following command:
+## Prerequisites
+Before starting the project, ensure you have the following installed:
+- Node.js (v18+ recommended)
+- Yarn package manager
+- Turbo Repo (if you don't have it, install it using `npm install -g turbo`)
 
-```sh
-npx create-turbo@latest
+## Setup and Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/gracious7/TruePapersAI.git
+   cd TruePapersAI
+   ```
+
+2. Install dependencies for both the web and API:
+   ```bash
+   yarn install
+   ```
+
+3. Run the development servers:
+
+   - **Frontend (Web)**:  
+     To run the web application, use:
+     ```bash
+     yarn workspace web dev
+     ```
+
+   - **Backend (API)**:  
+     To run the API backend, use:
+     ```bash
+     yarn workspace api dev
+     ```
+
+   - **Both (Web and API)**:  
+     To run both the web and API servers simultaneously using Turbo, use:
+     ```bash
+     turbo run dev
+     ```
+
+   The web app will typically be available at [http://localhost:3000](http://localhost:3000), and the API will be accessible on a separate port as defined in the project.
+
+## Development Workflow
+- **Web App**: Located in the `apps/web` directory.
+- **API**: Located in the `apps/api` directory.
+
+You can modify and run both parts independently for development purposes using the commands above.
+
+## Deployment
+For production deployment, make sure to build the web and API apps separately using:
+```bash
+yarn build
 ```
 
-## What's inside?
+Then deploy the apps to your chosen platform, ensuring to configure environment variables and production build settings.
 
-This Turborepo includes the following packages/apps:
-
-### Apps and Packages
-
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm build
-```
-
-### Develop
-
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm dev
-```
-
-### Remote Caching
-
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-```
-npx turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
