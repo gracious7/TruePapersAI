@@ -5,6 +5,8 @@
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
+    "web:dev": "yarn workspace web dev",
+    "api:dev": "yarn workspace api dev",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
@@ -17,7 +19,7 @@
   },
   "packageManager": "yarn@1.22.22",
   "workspaces": [
-    "apps/*",
-    "packages/*"
+    "apps/web",
+    "apps/api"
   ]
 }
