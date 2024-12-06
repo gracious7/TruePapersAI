@@ -7,10 +7,12 @@
     "lint": "turbo lint",
     "web:dev": "yarn workspace web dev",
     "api:dev": "yarn workspace api dev",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
+    "husky": "^9.1.7",
     "postcss": "^8.4.49",
     "prettier": "^3.2.5",
     "tailwindcss": "^3.4.16",
