@@ -7,6 +7,7 @@
     "lint": "turbo lint",
     "web:dev": "yarn workspace web dev",
     "api:dev": "yarn workspace api dev",
+    "web_app:dev": "yarn workspace web_app dev",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "prepare": "is-ci || husky install"
   },
